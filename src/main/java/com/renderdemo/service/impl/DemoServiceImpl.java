@@ -13,7 +13,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class DemoServiceImpl implements DemoService {
 
-    @Value("render.demo")
+    @Value("${render.demo}")
     private String demo;
 
     @Override
