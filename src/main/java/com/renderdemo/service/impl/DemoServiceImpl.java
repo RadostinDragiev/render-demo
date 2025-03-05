@@ -16,6 +16,7 @@ public class DemoServiceImpl implements DemoService {
     public Map<String, String> getMap() {
         log.warn("GetMap method called");
         return Map.of("Gosh", "Sofia",
-                "Pesho", "Troyan");
+                "Pesho", "Troyan",
+                "Ivan", "Varna");
     }
 }
