@@ -5,7 +5,6 @@ import com.renderdemo.service.DemoService;
 import com.renderdemo.service.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
@@ -17,15 +16,12 @@ public class DemoServiceImpl implements DemoService {
 
     private final OrderRepository orderRepository;
 
-    @Value("${render.demo}")
-    private String demo;
 
     @Override
     public Map<String, String> getMap() {
 
         this.orderRepository.save(Order.builder().customerId("1").customerName("Gosho").orderId("1").build());
-        log.warn("GetMap method called");
-        log.warn("This is my env variable test -> " + demo);
+        log.info("GetMap method called");
         return Map.of("Gosh", "Sofia",
                 "Pesho", "Troyan",
                 "Ivan", "Varna");

@@ -20,7 +20,7 @@ public class DemoController {
 
     @GetMapping("/")
     public ResponseEntity<Map<String, String>> getSomething() {
-        log.warn("Endpoint called");
+        log.info("Endpoint called");
         return ResponseEntity.ok(demoService.getMap());
     }
 }
